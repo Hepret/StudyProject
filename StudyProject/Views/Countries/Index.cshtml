@@ -1,0 +1,42 @@
+﻿@model List<StudyProject.Models.Country>
+
+@{
+    ViewData["Title"] = "Страны";
+}
+
+
+
+<div id="features-wrapper">
+    <div class="container">
+        <div class="row">
+            @foreach (var country in Model)
+            {
+
+                <div class="col-4 col-12-medium">
+
+                    <!-- Box -->
+                    <section class="box feature">
+                        <a href="Countries/Get/@country.CountryId" class="image featured"><img src="@country.CardPhotoLink" alt="" /></a>
+                        <div class="inner">
+                            <header>
+                                <h2>@country.Name</h2>
+                                <p>@country.CardDescription</p>
+                            </header>
+                            @if (@country.CardTagline.Length > 0)
+                            {
+                                <p>@country.CardTagline</p>
+                            }
+                            else
+                            {
+                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+                            }
+                        </div>
+                    </section>
+
+
+                </div>
+
+            }
+        </div>
+    </div>
+</div>

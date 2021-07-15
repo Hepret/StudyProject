@@ -1,0 +1,29 @@
+﻿@model StudyProject.Models.CountryArticle
+
+    <div id="main-wrapper">
+        <div class="container">
+            <div id="content">
+
+                <!-- Content -->
+                <article>
+
+                    <h2>@Model.Country.Name</h2>
+
+                    <img src="@Model.ImageLink" alt="Роттердам" style="width: 60%"/>
+
+                    <p>@Model.Info</p>
+
+
+                    <p><b>Достопримечательности</b> @Model.TouristAttractions</p>
+                    <p><b>Язык:</b> @Model.Language</p>
+                    <p><b>Места поесть</b>: @Model.PlacesToEat</p>
+                    <p><b>Досуг</b>: @Model.ThingsToDo</p>
+                    <p><b>Места для остановок</b>:@Model.PlacesToStay</p>
+                    <p><b>Лучшее время для посищения</b>: @Model.BestTimeToVisit</p>
+                    <p><b>Валюта</b>: @Model.Currency</p>
+
+                </article>
+                <a asp-action="Index"><input type="submit" value="К странам" class="btn btn-default" /></a>
+            </div>
+        </div>
+    </div>

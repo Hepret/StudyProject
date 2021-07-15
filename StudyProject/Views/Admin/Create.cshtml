@@ -1,0 +1,28 @@
+﻿@model StudyProject.Models.Country
+@{
+    ViewBag.Title = "Добавление Карточки Страны";
+}
+<form asp-action="create" asp-controller="admin">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Имя</label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CardDescription" class="control-label">CardDescription </label>
+        <input type="text" asp-for="CardDescription" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CardTagline" class="control-label"> CardTagline </label>
+        <input type="text" asp-for="CardTagline" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CardPhotoLink" class="control-label">CardPhotoLink </label>
+        <input type="text" asp-for="CardPhotoLink" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>

@@ -1,0 +1,57 @@
+﻿@model List<StudyProject.Models.Country>
+@*Header*@
+
+<link type="text/css" rel="stylesheet" href="~/gallery/css/lightgallery.css" />
+<link href="~/css/gallery.css" rel="stylesheet" />
+<!-- lightgallery plugins -->
+<link type="text/css" rel="stylesheet" href="~/gallery/css/lg-zoom.css" />
+@*------------------------------------------------------------------------------*@
+
+@*Scripts*@
+<script src="/gallery/lightgallery.min.js"></script>
+
+<!-- lightgallery plugins -->
+<script src="gallery/plugins/zoom/lg-zoom.min.js"></script>
+
+
+<div id="main-wrapper">
+    <div class="container">
+        <div id="content">
+            <div style="text-align:center;" >
+                <h2>Галерея</h2>
+                @foreach (var country in Model)
+                {
+
+
+                    <h3><a asp-action="Get" asp-controller="Countries" asp-route-id="@country.CountryId">@country.Name</a></h3>
+
+                    <div id="lightgallery-@country.CountryId">
+                        @foreach (var photo in country.GalleryImages)
+                        {
+                            <img src="@photo.ImageLink" class="photo" alt="@photo.Description" width="300" height="200" style="border-radius: 8px;" />
+                        }
+                    </div>
+                
+
+
+                }
+        </div>
+            </div>
+
+    </div>
+</div>
+
+@foreach (var country in Model)
+{
+    <script>
+        lightGallery(document.getElementById("lightgallery-@country.CountryId"), {
+            speed: 500,
+            plugins: [lgZoom]
+        });
+    </script>
+}
+
+
+
+
+

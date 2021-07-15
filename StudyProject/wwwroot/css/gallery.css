@@ -1,0 +1,26 @@
+﻿@media screen and (max-width: 736px) {
+    .photo {
+        width: 500px;
+        height: 300px;
+    }
+
+    lg-show-in .lg-toolbar, .lg-show-in .lg-prev, .lg-show-in .lg-next, .lg-show-in .lg-pager-outer {
+        opacity: 0;
+    }
+    
+}
+
+@media screen and (max-width: 980) {
+    
+}
+.photo {
+    margin: 0 3px 5px 3px;
+}
+
+h2 {
+    font-size: 3em;
+}
+h3 {
+    margin-top: 8px;
+    font-size: 2em;
+}

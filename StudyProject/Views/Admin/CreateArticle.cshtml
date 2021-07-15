@@ -1,0 +1,58 @@
+﻿@model StudyProject.Models.CountryArticle
+
+@{
+    ViewBag.Title = "Изменение Информации о Страны";
+}
+
+
+<form asp-action="CreateArticle" asp-controller="Admin">
+
+    <div class="form-group">
+        <label asp-for="Info" class="control-label">Статья</label>
+        <input type="text" asp-for="Info" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageLink" class="control-label">  Как добраться </label>
+        <input type="text" asp-for="ImageLink" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BestTimeToVisit" class="control-label">Лучшее время для посещения</label>
+        <input type="text" asp-for="BestTimeToVisit" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ThingsToDo" class="control-label"> Досуг </label>
+        <input type="text" asp-for="ThingsToDo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TouristAttractions" class="control-label"> Достопремичательности </label>
+        <input type="text" asp-for="TouristAttractions" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PlacesToStay" class="control-label"> Жилье </label>
+        <input type="text" asp-for="PlacesToStay" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PlacesToEat" class="control-label"> Питание </label>
+        <input type="text" asp-for="PlacesToEat" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Language" class="control-label"> Язык </label>
+        <input type="text" asp-for="Language" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Currency" class="control-label"> Курс </label>
+        <input type="text" asp-for="Currency" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>
